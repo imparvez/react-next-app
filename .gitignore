@@ -1,0 +1,9 @@
+node_modules/
+npm-debug.log
+.next
+.DS_Store
+.vscode
+bundles/
+.eslintcache
+package-lock.json
+yarn-error.log
