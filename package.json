@@ -36,7 +36,8 @@
     "build": "next build",
     "start": "NODE_ENV=production PORT=80 node server.js",
     "build:lint": "eslint '../**' --ext *.js --cache  --rule no-console:2 --rule no-debugger:2",
-    "lint": "eslint *.js --cache  --rule no-console:2 --rule no-debugger:2"
+    "lint": "eslint *.js --cache  --rule no-console:2 --rule no-debugger:2",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
