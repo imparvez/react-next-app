@@ -12,13 +12,33 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "lint-staged": "^9.2.0"
+  },
   "scripts": {
     "dev": "DEBUG=false NODE_ENV=development TIER=development node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production PORT=80 node server.js"
+    "start": "NODE_ENV=production PORT=80 node server.js",
+    "build:lint": "eslint '../**' --ext *.js --cache  --rule no-console:2 --rule no-debugger:2",
+    "lint": "eslint *.js --cache  --rule no-console:2 --rule no-debugger:2"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "yarn lint",
+      "git add"
+    ]
+  }
 }
