@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
 
 const Pages = () => (
@@ -11,9 +10,6 @@ const Pages = () => (
             <meta content="yes" name="mobile-web-app-capable" />
             <title>POST PAGE</title>
         </Head>
-        <Link href='/'><a>Home</a></Link>
-        <Link href='/pages'><a>Pages</a></Link>
-        <Link href='/about'><a>About</a></Link>
         <h1>PAGE POST</h1>
     </div>
 )
